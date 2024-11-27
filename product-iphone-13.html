@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 13</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Магазин Электроники</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="phones.html">Телефоны</a></li>
+            <li><a href="accessories.html">Аксессуары</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="product-detail">
+        <h2>iPhone 13</h2>
+        <img src="https://m.media-amazon.com/images/I/61voYsPhFTL._AC_UY327_FMwebp_QL65_.jpg" alt="iPhone 13">
+        <p><strong>Цена:</strong> 180,000 KZT</p>
+        <p><strong>Цена в юанях:</strong> ¥2,880</p>
+        <p><strong>Описание:</strong> iPhone 13 - это мощный смартфон с великолепной камерой, процессором A15 Bionic, и улучшенной батареей. Это идеальный выбор для тех, кто ценит высокое качество и производительность.</p>
+        <button onclick="addToCart('iPhone 13', 180000)">Добавить в корзину</button>
+    </div>
+</main>
+
+<footer>
+    <p>© 2024 Все права защищены</p>
+</footer>
+
+<script>
+    function addToCart(product, price) {
+        alert("Товар '" + product + "' добавлен в корзину за " + price + " KZT.");
+    }
+</script>
+
+</body>
+</html>

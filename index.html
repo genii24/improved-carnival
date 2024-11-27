@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .category-container {
+            padding: 20px;
+        }
+
+        .category-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .product-item {
+            width: 30%;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-item .title {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .product-item .price {
+            color: #ff7e5f;
+            font-weight: bold;
+        }
+
+        .product-item .price-kzt, .product-item .price-cny {
+            font-size: 16px;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .product-item button {
+            padding: 8px 12px;
+            margin-top: 10px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .product-item button:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">Mой магазин</div>
+    <a href="index.html">Главная</a>
+    <a href="phones.html">Телефоны</a>
+    <a href="accessories.html">Аксессуары</a>
+    <a href="headphones.html">Наушники</a>
+    <a href="laptops.html">Ноутбуки</a>
+    <a href="tablets.html">Таблетки</a>
+    <a href="electronics.html">Электроника</a>
+    <a href="cameras.html">Камеры</a>
+    <a href="games.html">Игры</a>
+    <a href="smartdevices.html">Умные устройства</a>
+    <a href="cart.html">Корзина</a>
+</div>
+<!-- Поисковая строка -->
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Поиск по товарам..." oninput="searchProducts()">
+</div>
+
+
+<div class="category-container">
+    
+
+    <div class="product-container">
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/610qFsdenLL._AC_UY327_FMwebp_QL65_.jpg" alt="Смартфон Xiaomi">
+            <p class="title">Смартфон Xiaomi</p>
+            <p class="price">Цена: 78,200 KZT</p>
+            <p class="price-cny">Цена в юанях: ¥1,241</p>
+            <button onclick="addToCart('Смартфон Xiaomi', 78200)">Добавить в корзину</button>
+            <a href="product-xiaomi.html"><button>Подробнее</button></a>
+        </div>
+
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/61xhbygQN4L._AC_UY327_FMwebp_QL65_.jpg" alt="Смартфон Samsung">
+            <p class="title">Смартфон Samsung</p>
+            <p class="price">Цена: 91,000 KZT</p>
+            <p class="price-cny">Цена в юанях: ¥1,460</p>
+            <button onclick="addToCart('Смартфон Samsung', 91000)">Добавить в корзину</button>
+            <a href="product-samsung.html"><button>Подробнее</button></a>
+        </div>
+<div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/71qeTVe5d1L._AC_UY327_FMwebp_QL65_.jpg" alt="Смартфон Huawei">
+            <p class="title">Смартфон Huawei</p>
+            <p class="price">Цена: 65,500 KZT</p>
+            <p class="price-cny">Цена в юанях: ¥1,039</p>
+            <button onclick="addToCart('Смартфон Huawei', 65500)">Добавить в корзину</button>
+            <a href="product-huawei.html"><button>Подробнее</button></a>
+        </div>
+<!-- Часы -->
+<div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/61TqOTJe+OL._AC_UL480_FMwebp_QL65_.jpg" alt="Часы Casio">
+    <p class="title">Часы Casio</p>
+    <p class="price">Цена: 15,500 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥250</p>
+    <button onclick="addToCart('Часы Casio', 15500)">Добавить в корзину</button>
+    <a href="product-casio.html"><button>Подробнее</button></a>
+</div>
+
+<!-- Платье -->
+<div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/3194xfpvANL._AC_UL480_FMwebp_QL65_.jpg" alt="Платье женское">
+    <p class="title">Платье женское</p>
+    <p class="price">Цена: 24,300 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥390</p>
+    <button onclick="addToCart('Платье женское', 24300)">Добавить в корзину</button>
+    <a href="product-dress.html"><button>Подробнее</button></a>
+</div>
+
+<!-- Шорты -->
+<div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/71Xgb4or3pS._AC_UL480_FMwebp_QL65_.jpg" alt="Шорты мужские">
+    <p class="title">Шорты мужские</p>
+    <p class="price">Цена: 8,500 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥135</p>
+    <button onclick="addToCart('Шорты мужские', 8500)">Добавить в корзину</button>
+    <a href="product-shorts.html"><button>Подробнее</button></a>
+</div>
+
+<!-- Кроссовки -->
+<div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/71k2ZobLduL._AC_UL480_FMwebp_QL65_.jpg" alt="Кроссовки Nike">
+    <p class="title">Кроссовки Nike</p>
+    <p class="price">Цена: 35,000 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥550</p>
+    <button onclick="addToCart('Кроссовки Nike', 35000)">Добавить в корзину</button>
+    <a href="product-nike.html"><button>Подробнее</button></a>
+</div>
+
+<!-- Наушники -->
+<div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/51ZV9sUq9xL._AC_UY327_FMwebp_QL65_.jpg" alt="Наушники Sony">
+    <p class="title">Наушники Sony</p>
+    <p class="price">Цена: 18,200 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥290</p>
+    <button onclick="addToCart('Наушники Sony', 18200)">Добавить в корзину</button>
+    <a href="product-sony.html"><button>Подробнее</button></a>
+</div>
+
+<!-- Сумка -->
+<div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/61UDx9jF0mL._AC_UL480_FMwebp_QL65_.jpg" alt="Сумка женская">
+    <p class="title">Сумка женская</p>
+    <p class="price">Цена: 12,800 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥205</p>
+    <button onclick="addToCart('Сумка женская', 12800)">Добавить в корзину</button>
+    <a href="product-bag.html"><button>Подробнее</button></a>
+</div>
+
+<!-- Телевизор -->
+<div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/91snjIt0nUL._AC_UY327_FMwebp_QL65_.jpg" alt="Телевизор Samsung">
+    <p class="title">Телевизор Samsung</p>
+    <p class="price">Цена: 150,000 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥2,400</p>
+    <button onclick="addToCart('Телевизор Samsung', 150000)">Добавить в корзину</button>
+    <a href="product-samsung-tv.html"><button>Подробнее</button></a>
+</div>
+
+<!-- Кофемашина -->
+<div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/81871DQNiAL._AC_UL480_FMwebp_QL65_.jpg" alt="Кофемашина DeLonghi">
+    <p class="title">Кофемашина DeLonghi</p>
+    <p class="price">Цена: 48,500 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥775</p>
+    <button onclick="addToCart('Кофемашина DeLonghi', 48500)">Добавить в корзину</button>
+    <a href="product-coffee-machine.html"><button>Подробнее</button></a>
+</div>
+
+<!-- Микроволновка -->
+<div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/71aIpRuaU1L._AC_UY327_FMwebp_QL65_.jpg" alt="Микроволновка LG">
+    <p class="title">Микроволновка LG</p>
+    <p class="price">Цена: 28,900 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥460</p>
+    <button onclick="addToCart('Микроволновка LG', 28900)">Добавить в корзину</button>
+    <a href="product-microwave.html"><button>Подробнее</button></a>
+</div>
+
+<!-- Стиральная машина -->
+<div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/611Gp5KxScL._AC_UY327_FMwebp_QL65_.jpg" alt="Стиральная машина Bosch">
+    <p class="title">Стиральная машина Bosch</p>
+    <p class="price">Цена: 95,000 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥1,520</p>
+    <button onclick="addToCart('Стиральная машина Bosch', 95000)">Добавить в корзину</button>
+    <a href="product-washing-machine.html"><button>Подробнее</button></a>
+</div>
+<!-- Смартфон Huawei -->
+<div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/61xk4XNRktL._AC_UY327_FMwebp_QL65_.jpg" alt="Смартфон Huawei">
+    <p class="title">Смартфон Huawei</p>
+    <p class="price">Цена: 65,500 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥1,039</p>
+    <button onclick="addToCart('Смартфон Huawei', 65500)">Добавить в корзину</button>
+    <a href="product-huawei.html"><button>Подробнее</button></a>
+</div>
+
+<!-- Смартфон Samsung Galaxy -->
+<div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/610qFsdenLL._AC_UY327_FMwebp_QL65_.jpg" alt="Смартфон Samsung Galaxy">
+    <p class="title">Смартфон Samsung Galaxy</p>
+    <p class="price">Цена: 75,000 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥1,200</p>
+    <button onclick="addToCart('Смартфон Samsung Galaxy', 75000)">Добавить в корзину</button>
+    <a href="product-samsung-galaxy.html"><button>Подробнее</button></a>
+</div>
+
+<!-- iPhone 13 -->
+<div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/61voYsPhFTL._AC_UY327_FMwebp_QL65_.jpg" alt="iPhone 13">
+    <p class="title">iPhone 13</p>
+    <p class="price">Цена: 180,000 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥2,880</p>
+    <button onclick="addToCart('iPhone 13', 180000)">Добавить в корзину</button>
+    <a href="product-iphone-13.html"><button>Подробнее</button></a>
+</div>
+
+<!-- Xiaomi Redmi Note 11 -->
+<div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/71SfoZu9a3L._AC_UY327_FMwebp_QL65_.jpg" alt="Xiaomi Redmi Note 11">
+    <p class="title">Xiaomi Redmi Note 11</p>
+    <p class="price">Цена: 45,000 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥720</p>
+    <button onclick="addToCart('Xiaomi Redmi Note 11', 45000)">Добавить в корзину</button>
+    <a href="product-xiaomi-note11.html"><button>Подробнее</button></a>
+</div>
+
+<!-- Realme Narzo 50 -->
+<div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/61vgbLrWDyL._AC_UY327_FMwebp_QL65_.jpg" alt="Realme Narzo 50">
+    <p class="title">Realme Narzo 50</p>
+    <p class="price">Цена: 55,000 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥880</p>
+    <button onclick="addToCart('Realme Narzo 50', 55000)">Добавить в корзину</button>
+    <a href="product-realme-narzo50.html"><button>Подробнее</button></a>
+</div>
+
+<!-- Samsung Galaxy A52 -->
+<div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/81v1TWgmOCL._AC_UY327_FMwebp_QL65_.jpg" alt="Samsung Galaxy A52">
+    <p class="title">Samsung Galaxy A52</p>
+    <p class="price">Цена: 55,000 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥880</p>
+    <button onclick="addToCart('Realme Narzo 50', 55000)">Добавить в корзину</button>
+    <a href="product-realme-narzo50.html"><button>Подробнее</button></a>
+</div>
+ <!-- Автомобильный зарядник -->
+ <div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/61TsOEhJ9nL._AC_UY327_FMwebp_QL65_.jpg" alt="Автомобильный зарядник">
+    <p class="title">Автомобильный зарядник</p>
+    <p class="price">Цена: 2,200 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥35</p>
+    <button onclick="addToCart('Автомобильный зарядник', 2200)">Добавить в корзину</button>
+    <a href="product-car-charger.html"><button>Подробнее</button></a>
+</div>
+  <!-- Свисток для собак -->
+  <div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/71+g8nbkGgL._AC_UL480_FMwebp_QL65_.jpg" alt="Свисток для собак">
+    <p class="title">Свисток для собак</p>
+    <p class="price">Цена: 800 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥13</p>
+    <button onclick="addToCart('Свисток для собак', 800)">Добавить в корзину</button>
+    <a href="product-dog-whistle.html"><button>Подробнее</button></a>
+</div>
+
+<!-- Флешка USB 64GB -->
+<div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/61aY9FempLL._AC_UY327_FMwebp_QL65_.jpg" alt="Флешка USB 64GB">
+    <p class="title">Флешка USB 64GB</p>
+    <p class="price">Цена: 2,500 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥40</p>
+    <button onclick="addToCart('Флешка USB 64GB', 2500)">Добавить в корзину</button>
+    <a href="product-usb-flashdrive-64gb.html"><button>Подробнее</button></a>
+</div>
+ <!-- Чехол для смартфона -->
+ <div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/71Y+19hr4LL._AC_UY327_FMwebp_QL65_.jpg" alt="Чехол для смартфона">
+    <p class="title">Чехол для смартфона</p>
+    <p class="price">Цена: 2,000 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥32</p>
+    <button onclick="addToCart('Чехол для смартфона', 2000)">Добавить в корзину</button>
+    <a href="product-phone-case.html"><button>Подробнее</button></a>
+</div>
+
+<!-- Мышка для ПК -->
+<div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/71nt3hcRpoL._AC_UL480_FMwebp_QL65_.jpg" alt="Мышка для ПК">
+    <p class="title">Мышка для ПК</p>
+    <p class="price">Цена: 4,500 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥72</p>
+    <button onclick="addToCart('Мышка для ПК', 4500)">Добавить в корзину</button>
+    <a href="product-pc-mouse.html"><button>Подробнее</button></a>
+</div>
+   <!-- Подстаканник автомобильный -->
+   <div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/71jM9zMPowL._AC_UL480_FMwebp_QL65_.jpg" alt="Подстаканник автомобильный">
+    <p class="title">Подстаканник автомобильный</p>
+    <p class="price">Цена: 2,000 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥32</p>
+    <button onclick="addToCart('Подстаканник автомобильный', 2000)">Добавить в корзину</button>
+    <a href="product-car-cup-holder.html"><button>Подробнее</button></a>
+</div>
+
+<!-- Зарядное устройство для смартфонов -->
+<div class="product-item">
+    <img src="https://m.media-amazon.com/images/I/81hss7SMd7L._AC_UL480_FMwebp_QL65_.jpg" alt="Зарядное устройство для смартфонов">
+    <p class="title">Зарядное устройство для смартфонов</p>
+    <p class="price">Цена: 3,500 KZT</p>
+    <p class="price-cny">Цена в юанях: ¥56</p>
+    <button onclick="addToCart('Зарядное устройство для смартфонов', 3500)">Добавить в корзину</button>
+    <a href="product-smartphone-charger.html"><button>Подробнее</button></a>
+</div>
+
+        <footer>
+    <p>© 2024 Все права защищены</p>
+</footer>
+
+<script>
+    function addToCart(product, price) {
+        alert("Товар '" + product + "' добавлен в корзину за " + price + " KZT.");
+    }
+</script>
+> RDT|PARAVOZZZ:
+Вот пример кода для создания поисковой строки, которая будет расположена по центру, и искать товары по ключевым словам. Весь код — HTML с встроенным JavaScript для поиска.
+
+Полный код для страницы с поисковой строкой:
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск товаров</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Стиль для поисковой строки */
+        .search-container {
+            text-align: center;
+            margin: 20px;
+        }
+
+        #searchInput {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Стиль для списка товаров */
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .product-item {
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .title {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .price {
+            color: #28a745;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Поисковая строка -->
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Поиск по товарам..." oninput="searchProducts()">
+</div>
+
+<!-- Список товаров -->
+<div class="product-container">
+    <div class="product-item">
+        <img src="https://m.media-amazon.com/images/I/61AQDfwqfqL._AC_UY327_FMwebp_QL65_.jpg" alt="Наушники 1">
+        <p class="title">Sony WH-1000XM4</p>
+        <p class="price">Цена: 45,000 KZT</p>
+    </div>
+    <div class="product-item">
+        <img src="https://m.media-amazon.com/images/I/61AQDfwqfqL._AC_UY327_FMwebp_QL65_.jpg" alt="Наушники 2">
+        <p class="title">Bose QuietComfort 35 II</p>
+        <p class="price">Цена: 50,000 KZT</p>
+    </div>
+    <div class="product-item">
+        <img src="https://m.media-amazon.com/images/I/71QDJfFqEgL._AC_UY327_FMwebp_QL65_.jpg" alt="Наушники 3">
+        <p class="title">Sennheiser Momentum 3</p>
+        <p class="price">Цена: 70,000 KZT</p>
+    </div>
+    <div class="product-item">
+        <img src="https://m.media-amazon.com/images/I/41PcxZ7m12L._AC_UY327_FMwebp_QL65_.jpg" alt="Наушники 4">
+        <p class="title">Jabra Elite 85h</p>
+        <p class="price">Цена: 40,000 KZT</p>
+    </div>
+    <div class="product-item">
+        <img src="https://m.media-amazon.com/images/I/71qPN6X0feL._AC_UY327_FMwebp_QL65_.jpg" alt="Наушники 5">
+        <p class="title">Beats Studio 3 Wireless</p>
+        <p class="price">Цена: 60,000 KZT</p>
+    </div>
+    <div class="product-item">
+        <img src="https://m.media-amazon.com/images/I/81v8UeBnyeL._AC_UL480_FMwebp_QL65_.jpg" alt="Наушники 6">
+        <p class="title">Apple AirPods Pro</p>
+        <p class="price">Цена: 50,000 KZT</p>
+    </div>
+</div>
+
+<!-- Встроенный JavaScript для поиска -->
+<script>
+    function searchProducts() {
+        const searchInput = document.getElementById('searchInput').value.toLowerCase(); // Получаем текст из строки поиска
+        const productItems = document.querySelectorAll('.product-item'); // Все товары
+
+        productItems.forEach(item => {
+            const productName = item.querySelector('.title').textContent.toLowerCase(); // Название товара
+
+
+// Если название товара содержит текст из поисковой строки
+            if (productName.includes(searchInput)) {
+                item.style.display = 'block'; // Показываем товар
+            } else {
+                item.style.display = 'none'; // Скрываем товар
+            }
+        });
+    }
+</script>
+
+
+
+</body>
+</html>
+

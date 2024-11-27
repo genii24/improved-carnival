@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аксессуары</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Общий стиль страницы */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product-item {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            width: calc(50% - 20px);
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .title {
+            font-weight: bold;
+            margin: 10px 0;
+            color: #007BFF;
+        }
+
+        .price {
+            color: #28a745;
+            margin: 5px 0;
+        }
+
+        .price-cny {
+            color: #6c757d;
+        }
+
+        .product-item button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .product-item button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Магазин Электроники</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2>Аксессуары для смартфонов и других устройств</h2>
+    <div class="products">
+        <!-- Товары -->
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/71TBg3aD0gL._AC_UL480_FMwebp_QL65_.jpg" alt="Коврик для мыши">
+            <p class="title">Коврик для мыши</p>
+            <p class="price">Цена: 1,500 KZT</p>
+            <p class="price-cny">Цена в юанях: ¥24</p>
+            <button onclick="addToCart('Коврик для мыши', 1500)">Добавить в корзину</button>
+        </div>
+
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/71jM9zMPowL._AC_UL480_FMwebp_QL65_.jpg" alt="Подстаканник автомобильный">
+            <p class="title">Подстаканник автомобильный</p>
+            <p class="price">Цена: 2,000 KZT</p>
+            <p class="price-cny">Цена в юанях: ¥32</p>
+            <button onclick="addToCart('Подстаканник автомобильный', 2000)">Добавить в корзину</button>
+        </div>
+
+
+<div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/81hss7SMd7L._AC_UL480_FMwebp_QL65_.jpg" alt="Зарядное устройство">
+            <p class="title">Зарядное устройство для смартфонов</p>
+            <p class="price">Цена: 3,500 KZT</p>
+            <p class="price-cny">Цена в юанях: ¥56</p>
+            <button onclick="addToCart('Зарядное устройство', 3500)">Добавить в корзину</button>
+        </div>
+
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/71Y+19hr4LL._AC_UY327_FMwebp_QL65_.jpg" alt="Чехол для телефона">
+            <p class="title">Чехол для телефона</p>
+            <p class="price">Цена: 2,000 KZT</p>
+            <p class="price-cny">Цена в юанях: ¥32</p>
+            <button onclick="addToCart('Чехол для телефона', 2000)">Добавить в корзину</button>
+        </div>
+    </div>
+</main>
+
+<script>
+    function addToCart(productName, price) {
+       " alert(Товар ";$;{productName}" добавлен в корзину. Цена: ${price} KZT);"
+    }
+</script>
+</body>
+</html>

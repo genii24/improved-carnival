@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .cart-header h1 {
+            margin: 0;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .cart-item .info {
+            flex-grow: 1;
+        }
+
+        .cart-item .info p {
+            margin: 5px 0;
+        }
+
+        .cart-item button {
+            padding: 5px 10px;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .cart-item button:hover {
+            background-color: #cc3333;
+        }
+
+        .cart-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .cart-footer button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .cart-footer button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html">Главная</a>
+    <a href="phones.html">Телефоны</a>
+    <a href="cart.html">Корзина <span id="cart-count">(0)</span></a>
+</div>
+
+<div class="container">
+    <div class="cart-header">
+        <h1>Ваша корзина</h1>
+        <button onclick="clearCart()">Очистить корзину</button>
+    </div>
+
+    <div id="cart-items">
+        <!-- Товары будут добавляться сюда -->
+    </div>
+
+    <div class="cart-footer">
+        <p><strong>Итого:</strong> <span id="total-price">0 KZT</span></p>
+        <button onclick="checkout()">Оформить заказ</button>
+    </div>
+</div>
+
+<script>
+    // Массив для хранения товаров в корзине
+    let cart = [];
+
+    // Функция для добавления товара в корзину
+    function addToCart(productName, productPrice, productImage) {
+        const product = {
+            name: productName,
+            price: parseFloat(productPrice),
+            image: productImage
+        };
+
+        // Добавляем товар в корзину
+        cart.push(product);
+        updateCart();
+    }
+
+    // Функция для обновления отображения корзины
+    function updateCart() {
+        const cartCount = document.getElementById("cart-count");
+        const cartItemsContainer = document.getElementById("cart-items");
+        const totalPriceElement = document.getElementById("total-price");
+
+        // Очищаем текущий список товаров
+        cartItemsContainer.innerHTML = '';
+
+        let totalPrice = 0;
+// Генерируем список товаров в корзине
+        cart.forEach((item, index) => {
+            const cartItemDiv = document.createElement("div");
+            cartItemDiv.classList.add("cart-item");
+
+            cartItemDiv.innerHTML = 
+                <img src="${item.image}" alt="${item.name}">
+                <div class="info">
+                    <p><strong>${item.name}</strong></p>
+                    <p>Цена: ${item.price.toFixed(2)} KZT</p>
+                </div>
+                <button onclick="removeFromCart(${index})">Удалить</button>
+            ;
+
+            cartItemsContainer.appendChild(cartItemDiv);
+
+            totalPrice += item.price;
+        });
+
+        // Обновляем количество товаров и итоговую цену
+        cartCount.textContent = (${cart.length});
+        totalPriceElement.textContent = ${totalPrice.toFixed(2)} KZT;
+    }
+
+    // Функция для удаления товара из корзины
+    function removeFromCart(index) {
+        cart.splice(index, 1);
+        updateCart();
+    }
+
+    // Функция для очистки корзины
+    function clearCart() {
+        cart = [];}
+        updateCart();
+    }
+        // Функция для оформления заказа
+    function checkout() {
+        if (cart.length === 0) {
+            alert('Ваша корзина пуста. Добавьте товары перед оформлением заказа.');
+        } else {
+            alert('Спасибо за покупку! Ваш заказ оформлен.');
+            clearCart();
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Смартфон Samsung Galaxy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Магазин Электроники</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="phones.html">Телефоны</a></li>
+            <li><a href="accessories.html">Аксессуары</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="product-detail">
+        <h2>Смартфон Samsung Galaxy</h2>
+        <img src="https://m.media-amazon.com/images/I/610qFsdenLL._AC_UY327_FMwebp_QL65_.jpg" alt="Смартфон Samsung Galaxy">
+        <p><strong>Цена:</strong> 75,000 KZT</p>
+        <p><strong>Цена в юанях:</strong> ¥1,200</p>
+        <p><strong>Описание:</strong> Samsung Galaxy предлагает отличное сочетание цены и качества. С этим устройством вы получаете стабильную работу, хороший экран и долговечную батарею.</p>
+        <button onclick="addToCart('Смартфон Samsung Galaxy', 75000)">Добавить в корзину</button>
+    </div>
+</main>
+
+<footer>
+    <p>© 2024 Все права защищены</p>
+</footer>
+
+<script>
+    function addToCart(product, price) {
+        alert("Товар '" + product + "' добавлен в корзину за " + price + " KZT.");
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+><!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sony WH-1000XM4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #eef2f3, #8e9eab);
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #4CAF50;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .product-header img {
+            width: 40%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-header .details {
+            width: 55%;
+        }
+
+        .product-header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+
+        .product-header p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product-header .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e67e22;
+            margin-top: 10px;
+        }
+
+        .product-header .buttons {
+            margin-top: 20px;
+        }
+
+        .product-header .buttons button {
+            padding: 12px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .product-header .buttons .add-to-cart {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .product-header .buttons .add-to-cart:hover {
+            background-color: #45a049;
+        }
+
+        .product-header .buttons .more-info {
+            background-color: #e67e22;
+            color: white;
+        }
+
+        .product-header .buttons .more-info:hover {
+            background-color: #d35400;
+        }
+
+        .features {
+            margin-top: 30px;
+        }
+
+        .features h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #4CAF50;
+        }
+
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .features ul li::before {
+            content: "✔";
+            color: #4CAF50;
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html">Главная</a>
+    <a href="phones.html">Телефоны</a>
+    <a href="cart.html">Корзина</a>
+    <a href="headphones.html">Наушники</a>
+</div>
+
+<div class="container">
+    <div class="product-header">
+        <img src="https://m.media-amazon.com/images/I/61AQDfwqfqL._AC_UY327_FMwebp_QL65_.jpg" alt="Sony WH-1000XM4">
+        <div class="details">
+            <h1>Sony WH-1000XM4</h1>
+            <p>Наушники Sony WH-1000XM4 обеспечивают превосходное качество звука и активное шумоподавление. Это идеальный выбор для любителей музыки и тех, кто ищет комфорт в повседневной жизни.</p>
+
+
+<p class="price">Цена: 160,000 KZT</p>
+            <div class="buttons">    
+                <button class="more-info" onclick="alert('Дополнительная информация скоро появится!')">Подробнее</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="features">
+        <h2>Характеристики</h2>
+        <ul>
+            <li>Активное шумоподавление</li>
+            <li>До 30 часов работы от батареи</li>
+            <li>Поддержка LDAC и Hi-Res Audio</li>
+            <li>Сенсорное управление</li>
+            <li>Сопряжение через Bluetooth 5.0</li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    © 2024 Мой магазин - Все права защищены
+</footer>
+
+<script>
+    // Функция для добавления товара в корзину
+    function addToCart(productName, productPrice, productImage) {
+       " alert(Товар ";$;{productName}" добавлен в корзину.);"
+        // Здесь можно добавить логику для отправки данных в корзину
+    }
+</script>
+
+</body>
+</html>

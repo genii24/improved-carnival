@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Смартфон Huawei</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Подключаем общий стиль -->
+</head>
+<body>
+
+<header>
+    <h1>Магазин Электроники</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="phones.html">Телефоны</a></li>
+            <li><a href="accessories.html">Аксессуары</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="product-detail">
+        <h2>Смартфон Huawei</h2>
+        <img src="https://m.media-amazon.com/images/I/61xk4XNRktL._AC_UY327_FMwebp_QL65_.jpg" alt="Смартфон Huawei">
+        <p><strong>Цена:</strong> 65,500 KZT</p>
+        <p><strong>Цена в юанях:</strong> ¥1,039</p>
+        <p><strong>Описание:</strong> Этот смартфон Huawei обладает отличными характеристиками для повседневного использования. Он оснащен мощным процессором и отличной камерой, что делает его отличным выбором для большинства пользователей.</p>
+        <button onclick="addToCart('Смартфон Huawei', 65500)">Добавить в корзину</button>
+    </div>
+</main>
+
+<footer>
+    <p>© 2024 Все права защищены</p>
+</footer>
+
+<script>
+    function addToCart(product, price) {
+        alert("Товар '" + product + "' добавлен в корзину за " + price + " KZT.");
+    }
+</script>
+
+</body>
+</html>

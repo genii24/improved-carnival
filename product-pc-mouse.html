@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мышка для ПК</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение стилей -->
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="accessories.html">Аксессуары</a>
+        <a href="cart.html">Корзина</a>
+    </nav>
+
+    <main>
+        <h1>Мышка для ПК</h1>
+
+        <!-- Изображение и описание товара -->
+        <div class="product-detail">
+            <div class="product-image">
+                <img src="https://m.media-amazon.com/images/I/71nt3hcRpoL._AC_UL480_FMwebp_QL65_.jpg" alt="Мышка для ПК">
+            </div>
+
+            <div class="product-info">
+                <p class="price">Цена: 4,500 KZT</p>
+                <p class="price-cny">Цена в юанях: ¥72</p>
+                <p class="description">
+                    Эта беспроводная мышка идеально подходит для офисных работ, учебы и игр. Компактная и удобная в использовании, она будет вашим надежным помощником на рабочем столе. Оборудована несколькими уровнями чувствительности и подходит для большинства операционных систем.
+                </p>
+                
+                <button onclick="addToCart('Мышка для ПК', 4500)">Добавить в корзину</button>
+            </div>
+        </div>
+
+        <!-- Рекомендуемые товары -->
+        <div class="recommended-products">
+            <h3>Рекомендуем также</h3>
+            <div class="product-item">
+                <img src="https://m.media-amazon.com/images/I/71Y+19hr4LL._AC_UY327_FMwebp_QL65_.jpg" alt="Чехол для смартфона">
+                <p class="title">Чехол для смартфона</p>
+                <p class="price">Цена: 2,000 KZT</p>
+                <a href="product-phone-case.html"><button>Подробнее</button></a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подключение скриптов -->
+    <script src="script.js"></script>
+</body>
+</html>

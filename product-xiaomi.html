@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Смартфон Xiaomi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .product-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px;
+            gap: 40px;
+        }
+
+        .product-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .product-info {
+            flex: 1;
+            text-align: left;
+        }
+
+        .product-info h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .product-info p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product-info .price {
+            color: #28a745;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .add-to-cart-btn {
+            border: 2px solid #28a745;
+            background-color: white;
+            color: #28a745;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .similar-products {
+            padding: 40px;
+            background-color: #fff;
+            margin-top: 40px;
+        }
+
+        .similar-products h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .similar-products .product-item {
+            display: inline-block;
+            width: 30%;
+            text-align: center;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .similar-products .product-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .similar-products .product-item .title {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .similar-products .product-item .price {
+            color: #ff7e5f;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .similar-products .product-item button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .similar-products .product-item button:hover {
+            background-color: #218838;
+        }
+
+        .similar-products .product-item .detail-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 12px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            border: none;
+        }
+
+        .similar-products .product-item .detail-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html">Главная</a>
+        <a href="phones.html">Телефоны</a>
+        <a href="accessories.html">Аксессуары</a>
+        <a href="headphones.html">Наушники</a>
+        <a href="laptops.html">Ноутбуки</a>
+    </div>
+
+<div class="product-container">
+        <!-- Изображение продукта -->
+        <div class="product-image">
+            <img src="https://m.media-amazon.com/images/I/610qFsdenLL._AC_UY327_FMwebp_QL65_.jpg" alt="Смартфон Xiaomi" />
+        </div>
+
+        <!-- Информация о продукте -->
+        <div class="product-info">
+            <h1>Смартфон Xiaomi</h1>
+            <p><strong>Описание:</strong> Мощный и стильный смартфон Xiaomi с отличной камерой и долгим временем работы.</p>
+            <p><strong>Характеристики:</strong></p>
+            <ul>
+                <li>Процессор: Snapdragon 888</li>
+                <li>Оперативная память: 6GB</li>
+                <li>Основная камера: 108MP</li>
+                <li>Экран: 6.67" AMOLED</li>
+                <li>Батарея: 4500mAh</li>
+            </ul>
+
+            <p class="price">Цена: 78,200 KZT</p>
+
+            <!-- Кнопка "Добавить в корзину" -->
+            <button class="add-to-cart-btn" onclick="addToCart('Смартфон Xiaomi', 78200)">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <!-- Похожие товары -->
+    <div class="similar-products">
+        <h2>Похожие товары</h2>
+        <div class="product-item">
+            <img src="data:image/webp;base64,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" alt="Смартфон Samsung" />
+            <p class="title">Смартфон Samsung</p>
+            <p class="price">Цена: 91,000 KZT</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Смартфон Samsung', 91000)">Добавить в корзину</button>
+            <button class="detail-btn" onclick="window.location.href='product-samsung.html'">Подробнее</button>
+        </div>
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/61xhbygQN4L._AC_UY327_FMwebp_QL65_.jpg" alt="Смартфон Huawei" />
+            <p class="title">Смартфон Huawei</p>
+            <p class="price">Цена: 85,000 KZT</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Смартфон Huawei', 85000)">Добавить в корзину</button>
+            <button class="detail-btn" onclick="window.location.href='product-huawei.html'">Подробнее</button>
+        </div>
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/61aY9FempLL._AC_UY327_FMwebp_QL65_.jpg" alt="Смартфон OnePlus" />
+            <p class="title">Смартфон OnePlus</p>
+            <p class="price">Цена: 98,000 KZT</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Смартфон OnePlus', 98000)">Добавить в корзину</button>
+            <button class="detail-btn" onclick="window.location.href='product-oneplus.html'">Подробнее</button>
+        </div>
+        <div class="product-item">
+            <img src="data:image/webp;base64,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" alt="Смартфон Realme" />
+            <p class="title">Смартфон Realme</p>
+            <p class="price">Цена: 79,000 KZT</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Смартфон Realme', 79000)">Добавить в корзину</button>
+            <button class="detail-btn" onclick="window.location.href='product-realme.html'">Подробнее</button>
+        </div>
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/71SfoZu9a3L._AC_UY327_FMwebp_QL65_.jpg" alt="Смартфон Xiaomi Redmi" />
+            <p class="title">Смартфон Xiaomi Redmi</p>
+            <p class="price">Цена: 65,000 KZT</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Смартфон Xiaomi Redmi', 65000)">Добавить в корзину</button>
+            <button class="detail-btn" onclick="window.location.href='product-redmi.html'">Подробнее</button>
+        </div>
+        <div class="product-item">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRH-wFX_UQhX1f90MFFk07dVsxKAf72NiZadVaqjiYNWYYg3wwD94MUdK2xNz19IHcEK0vibzwQvV1V41uQT2v7gWLTGgcafsGr7Mysy0E1g2Ov6R50PT9BKC2-MhFP1d_GaLYhqBUy6w&usqp=CAc" alt="Смартфон Vivo" />
+            <p class="title">Смартфон Vivo</p>
+            <p class="price">Цена: 92,000 KZT</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Смартфон Vivo', 92000)">Добавить в корзину</button>
+            <button class="detail-btn" onclick="window.location.href='product-vivo.html'">Подробнее</button>
+        </div>
+    </div>
+
+</body>
+</html>

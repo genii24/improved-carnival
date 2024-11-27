@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Телефоны</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение файла со стилями -->
+    <style>
+        /* Общие стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: #007BFF;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product-item {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            width: calc(50% - 20px);
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .title {
+            font-weight: bold;
+            margin: 10px 0;
+            color: #007BFF;
+        }
+
+        .price {
+            color: #28a745;
+            margin: 5px 0;
+        }
+
+        .price-cny {
+            color: #6c757d;
+        }
+
+        .product-item button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .product-item button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="phones.html">Телефоны</a>
+        <a href="cart.html">Корзина</a>
+    </nav>
+
+    <!-- Контент -->
+    <main>
+        <h1>Категория: Телефоны</h1>
+        <div class="products">
+            <!-- Товар 1 -->
+            <div class="product-item">
+                <img src="https://m.media-amazon.com/images/I/61voYsPhFTL._AC_UY327_FMwebp_QL65_.jpg" alt="iPhone 13">
+                <p class="title">iPhone 13</p>
+                <p class="price">Цена: 350,000 KZT</p>
+                <p class="price-cny">Цена в юанях: ¥5600</p>
+                <button onclick="addToCart('iPhone 13', 350000)">Добавить в корзину</button>
+                <a href="product-iphone13.html"><button>Подробнее</button></a>
+            </div>
+
+           <!-- Xiaomi Redmi Note 11 -->
+    <div class="product-item">
+        <img src="https://m.media-amazon.com/images/I/71SfoZu9a3L._AC_UY327_FMwebp_QL65_.jpg" alt="Xiaomi Redmi Note 11">
+        <p class="title">Xiaomi Redmi Note 11</p>
+        <p class="price">Цена: 45,000 KZT</p>
+        <p class="price-cny">Цена в юанях: ¥720</p>
+        <button onclick="addToCart('Xiaomi Redmi Note 11', 45000)">Добавить в корзину</button>
+        <a href="product-xiaomi-note11.html"><button>Подробнее</button></a>
+    </div>
+        <!-- Realme Narzo 50 -->
+    <div class="product-item">
+        <img src="https://m.media-amazon.com/images/I/61vgbLrWDyL._AC_UY327_FMwebp_QL65_.jpg" alt="Realme Narzo 50">
+        <p class="title">Realme Narzo 50</p>
+        <p class="price">Цена: 55,000 KZT</p>
+        <p class="price-cny">Цена в юанях: ¥880</p>
+        <button onclick="addToCart('Realme Narzo 50', 55000)">Добавить в корзину</button>
+        <a href="product-realme-narzo50.html"><button>Подробнее</button></a>
+    </div>
+           
+    <!-- Samsung Galaxy A52 -->
+    <div class="product-item">
+        <img src="https://m.media-amazon.com/images/I/81v1TWgmOCL._AC_UY327_FMwebp_QL65_.jpg" alt="Samsung Galaxy A52">
+        <p class="title">Samsung Galaxy A52</p>
+        <p class="price">Цена: 55,000 KZT</p>
+        <p class="price-cny">Цена в юанях: ¥880</p>
+        <button onclick="addToCart('Realme Narzo 50', 55000)">Добавить в корзину</button>
+        <a href="product-realme-narzo50.html"><button>Подробнее</button></a>
+    </div>
+    
+    <!-- huawey -->
+    <div class="product-item">
+        <img src="https://m.media-amazon.com/images/I/61xk4XNRktL._AC_UY327_FMwebp_QL65_.jpg" alt="huawey">
+        <p class="title">huawey</p>
+        <p class="price">Цена: 55,000 KZT</p>
+        <p class="price-cny">Цена в юанях: ¥880</p>
+        <button onclick="addToCart('huawey', 55000)">Добавить в корзину</button>
+        <a href="product-realme-narzo50.html"><button>Подробнее</button></a>
+    </div>
+
+    <!-- Samsung Galaxy-->
+    <div class="product-item">
+        <img src="https://m.media-amazon.com/images/I/610qFsdenLL._AC_UY327_FMwebp_QL65_.jpg" alt="Samsung Galaxy">
+        <p class="title">Samsung Galaxy</p>
+        <p class="price">Цена: 55,000 KZT</p>
+        <p class="price-cny">Цена в юанях: ¥880</p>
+        <button onclick="addToCart('Samsung Galaxy', 55000)">Добавить в корзину</button>
+        <a href="product-realme-narzo50.html"><button>Подробнее</button></a>
+    </div>
+      <!-- Xiaomi Redmi Note 12-->
+    <div class="product-item">
+        <img src="https://m.media-amazon.com/images/I/610qFsdenLL._AC_UY327_FMwebp_QL65_.jpg" alt="Xiaomi Redmi Note 12">
+        <p class="title">Xiaomi Redmi Note 12</p>
+        <p class="price">Цена: 55,000 KZT</p>
+        <p class="price-cny">Цена в юанях: ¥880</p>
+        <button onclick="addToCart('Xiaomi Redmi Note 12', 55000)">Добавить в корзину</button>
+        <a href="product-realme-narzo50.html"><button>Подробнее</button></a>
+    </div>
+        </div>
+    </main>
+
+    <!-- Скрипты -->
+    <script>
+        function addToCart(productName, price) {
+           " alert(Товар ";$;{productName}" добавлен в корзину. Цена: ${price} KZT);"
+        }
+    </script>
+</body>
+</html>

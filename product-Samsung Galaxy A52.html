@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Galaxy A52</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Магазин Электроники</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="phones.html">Телефоны</a></li>
+            <li><a href="accessories.html">Аксессуары</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="product-detail">
+        <h2>Samsung Galaxy A52</h2>
+        <img src="https://m.media-amazon.com/images/I/81v1TWgmOCL._AC_UY327_FMwebp_QL65_.jpg" alt="Samsung Galaxy A52">
+        <p><strong>Цена:</strong> 68,000 KZT</p>
+        <p><strong>Цена в юанях:</strong> ¥1,080</p>
+        <p><strong>Описание:</strong> Samsung Galaxy A52 - это смартфон среднего класса, который сочетает в себе мощный процессор, качественный дисплей и отличную камеру, что делает его отличным выбором для большинства пользователей.</p>
+        <button onclick="addToCart('Samsung Galaxy A52', 68000)">Добавить в корзину</button>
+    </div>
+</main>
+
+<footer>
+    <p>© 2024 Все права защищены</p>
+</footer>
+
+<script>
+    function addToCart(product, price) {
+        alert("Товар '" + product + "' добавлен в корзину за " + price + " KZT.");
+    }
+</script>
+
+</body>
+</html>
+
+
